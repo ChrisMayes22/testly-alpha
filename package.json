@@ -1,0 +1,37 @@
+{
+  "name": "testly",
+  "version": "1.0.0",
+  "description": "A web-app that allows students to take online simulations of customized tests.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "SET \"NODE_ENV=test\" && nodemon --exec mocha --recursive -R min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisMayes22/testly.git"
+  },
+  "author": "Chris Mayes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisMayes22/testly/issues"
+  },
+  "homepage": "https://github.com/ChrisMayes22/testly#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.16",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0"
+  }
+}
